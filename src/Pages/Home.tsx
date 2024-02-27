@@ -1,5 +1,7 @@
-export const Home = () => { 
-  return <div className="App">
-    <h1>Homepage</h1>
-  </div>
+import { useSelector } from "react-redux";
+
+export const Home = () => {
+  const username = useSelector((state: any) => state.user.value.username);
+
+  return <h1> THIS IS THE HOME PAGE {username}</h1>;
 };
